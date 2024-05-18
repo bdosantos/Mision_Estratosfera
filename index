@@ -10,12 +10,13 @@
     <a-scene>
         <!-- Carga de modelos -->
         <a-assets>
+             <a-asset-item id="museo_Mostoles-glb" src="museo_Mostoles.glb"></a-asset-item>
         </a-assets>
 
         <!-- Modelo 3D del museo -->
-        <a-entity gltf-model="#museo-glb" scale="100 75 100">
+        <a-entity gltf-model="#museo_Mostoles-glb" scale="100 75 100">
         <!-- Objetos dentro del museo -->
-     <!-- Cámara dentro del museo con controles de mira y controles WASD -->
+        <!-- Cámara dentro del museo con controles de mira y controles WASD -->
             <a-entity camera look-controls wasd-controls position="-80 60 -100"></a-entity>
         </a-entity>
 
