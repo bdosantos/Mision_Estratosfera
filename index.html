@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirfidos Vs Pulgonautas: Misión Estratosfera</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras/dist/aframe-extras.min.js"></script>
 </head>
 <body>
     <a-scene>
@@ -47,7 +48,7 @@
              <!--globo-->
              <a-entity gltf-model="#globo-glb" position="230 50 -100" scale="15 15 15"></a-entity>
              <!--laboratorio-->
-            <a-entity gltf-model="#nabo-glb" position="-200 50 -230" scale="0.25 0.25 0.25" rotation="0 90 0" id="nabo" class="clickable"></a-entity>
+            <a-entity gltf-model="#nabo-glb" position="-200 50 -230" scale="0.25 0.25 0.25" rotation="0 90 0" id="nabo" class="clickable" draggable></a-entity>
              <!--bichos-->
             <a-entity gltf-model="#sirfido-glb" position="200 70 -300" scale="3 3 5" rotation="0 -90 0"></a-entity>
             <!-- Cámara dentro del museo con controles de mira y controles WASD -->
@@ -91,8 +92,17 @@
         });
 
         document.querySelector('#nabo').setAttribute('show-gif-on-click', '');
+
+        // Registro del componente draggable
+        AFRAME.registerComponent('draggable', {
+            init: function () {
+                this.el.setAttribute('grabbable', '');
+            }
+        });
     </script>
 </body>
+</html>
+
 </html>
 
 
