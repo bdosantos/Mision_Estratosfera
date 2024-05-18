@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sirfidos Vs Pulgonautas: Misión Estratosfera</title>
+    <title>Sirfidos Vs Pulgonautas: Misión Estratosfera</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
     <a-scene>
         <!-- Carga de modelos -->
         <a-assets>
-             <a-asset-item id="museo_Mostoles-glb" src="museo_Mostoles.glb"></a-asset-item>
+            <a-asset-item id="museo_Mostoles-glb" src="museo_Mostoles.glb"></a-asset-item>
         </a-assets>
 
         <!-- Modelo 3D del museo -->
         <a-entity gltf-model="#museo_Mostoles-glb" scale="100 75 100">
-        <!-- Objetos dentro del museo -->
-        <!-- Cámara dentro del museo con controles de mira y controles WASD -->
+            <!-- Objetos dentro del museo -->
+            <!-- Cámara dentro del museo con controles de mira y controles WASD -->
             <a-entity camera look-controls wasd-controls position="-80 60 -100"></a-entity>
         </a-entity>
 
         <!-- Luz ambiente para iluminar el entorno -->
-        <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
+        <a-light type="ambient" color="#FFFFFF" intensity="0.2"></a-light> <!-- Reducir intensidad a 0.2 -->
+
         <!-- Luz puntual para iluminar el interior del museo -->
-        <a-light type="point" color="#FFFFFF" intensity="0.8" position="0 10 0"></a-light>
+        <a-light type="point" color="#FFFFFF" intensity="0.9" position="0 10 0"></a-light> <!-- Aumentar intensidad a 0.9 -->
 
     </a-scene>
 </body>
