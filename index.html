@@ -23,21 +23,21 @@
         <a-entity gltf-model="#museob2-glb" scale="100 75 100">
             <!-- Objetos dentro del museo -->
             <!--Logos-->
-            <a-entity gltf-model="#malasana-glb" position="-180 70 90" scale="3 3 3" rotation="-90 180 90"></a-entity>
-            <a-entity gltf-model="#cmadrid-glb" position="-240 70 70" scale="3 3 3" rotation="-90 0 0"></a-entity>
+            <a-entity gltf-model="#malasana-glb" position="-250 70 80" scale="3 3 3" rotation="-90 180 90"></a-entity>
+            <a-entity gltf-model="#cmadrid-glb" position="-250 70 50" scale="3 3 3" rotation="-90 0 0"></a-entity>
             <a-entity gltf-model="#bionostrum-glb" position="160 80 -340" scale="4 4 4" rotation="-90 180 90"></a-entity>
-            <a-entity gltf-model="#CSIC-glb" position="-240 150 -70" scale="4 4 4" rotation="-90 0 0"></a-entity>
-            <a-entity gltf-model="#ICA-glb" position="-240 150 50" scale="4 4 4" rotation="-90 0 0"></a-entity>
-            <a-entity gltf-model="#CIBIO-glb" position="-240 80 -70" scale="4 4 4" rotation="-90 0 0"></a-entity>
+            <a-entity gltf-model="#CSIC-glb" position="-250 70 0" scale="4 4 4" rotation=" 0 0"></a-entity>
+            <a-entity gltf-model="#ICA-glb" position="-250 70 50" scale="4 4 4" rotation=" 0 0"></a-entity>
+            <a-entity gltf-model="#CIBIO-glb" position="-250 80 130" scale="4 4 4" rotation="0 0 0"></a-entity>
             <!-- Cámara dentro del museo con controles de mira y controles WASD -->
             <a-entity camera look-controls wasd-controls position="-80 60 -100"></a-entity>
         </a-entity>
 
         <!-- Luz ambiente para iluminar el entorno -->
-        <a-light type="ambient" color="#FFFFFF" intensity="0.2"></a-light>
+        <a-light type="ambient" color="#FFFFFF" intensity="0.1"></a-light>
 
         <!-- Luz puntual para iluminar el interior del museo -->
-        <a-light type="point" color="#FFFFFF" intensity="0.9" position="0 10 0"></a-light>
+        <a-light type="point" color="#FFFFFF" intensity="1" position="0 10 0"></a-light>
 
     </a-scene>
 </body>
