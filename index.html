@@ -14,13 +14,14 @@
                 radius: {type: 'number', default: 5}
             },
             init: function () {
+                this.camera = document.querySelector(this.data.target);
                 this.el.addEventListener('animation-complete', () => {
                     this.isAnimating = false;
                 });
                 this.isAnimating = false;
             },
             tick: function () {
-                const targetPosition = this.data.target.object3D.position;
+                const targetPosition = this.camera.object3D.position;
                 const elPosition = this.el.object3D.position;
                 const distance = targetPosition.distanceTo(elPosition);
                 if (distance < this.data.radius && !this.isAnimating) {
@@ -92,7 +93,7 @@
             <!--globo-->
             <a-entity gltf-model="#globo-glb" position="230 50 -100" scale="15 15 15"></a-entity>
             <!--laboratorio-->
-            <a-entity id="nabo" gltf-model="#nabo-glb" position="150 50 -235" scale="0.25 0.25 0.25" rotation="0 90 0" proximity-check="target: [camera]; radius: 5" rotate-animation></a-entity>
+            <a-entity id="nabo" gltf-model="#nabo-glb" position="150 50 -235" scale="0.25 0.25 0.25" rotation="0 90 0" proximity-check="target: #camera; radius: 5" rotate-animation></a-entity>
             <!--bichos-->
             <a-entity gltf-model="#sirfido-glb" position="-200 70 -300" scale="3 3 5" rotation="0 -90 0"></a-entity>
             <a-entity gltf-model="#sirfido-glb" position="-200 70 -275" scale="3 3 5" rotation="0 -90 0"></a-entity>
@@ -111,6 +112,7 @@
     </a-scene>
 </body>
 </html>
+
 
 
 
